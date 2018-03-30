@@ -38,21 +38,23 @@ int main(int argc, char* argv[]) {
 
 	cout << "x = " << endl << "    ";
 	print_bytes(x);
-	cout << endl;
+	cout << endl << endl;
 
 	cout << "y = " << endl << "    ";
 	print_bytes(y);
-	cout << endl;
+	cout << endl << endl;
 
 	bytes x2;
 	encoder.decode(y, x2);
 
 	string x1s, x2s;
 	bytes_to_string(x, x1s);
-	cout << x1s << endl;
 	bytes_to_string(x2, x2s);
-	cout << x2s << endl;
-	cout << "equal: " << (x == x2) << endl;
+
+	cout << "original string: " << x1s << endl;
+	cout << "decoded string:  " << x2s << endl;
+	cout << "strings are equal: " << (x == x2) << endl;
+	cout << endl;
 
 	cout << "|x| = " << x.size() << endl;
 	cout << "|y| = " << y.size() << endl;
