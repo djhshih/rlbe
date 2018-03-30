@@ -8,5 +8,5 @@ demo: demo.cpp
 	g++ -o demo demo.cpp
 
 clean:
-	rm -rf demo check
+	rm -rf demo test
 

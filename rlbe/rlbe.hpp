@@ -11,7 +11,7 @@
 #include <iterator>   // back_inserter
 
 
-namespace rle {
+namespace rlbe {
 
 using namespace std;
 
@@ -144,6 +144,6 @@ public:
 };
 
 
-}  // namespace rle
+}  // namespace rlbe
 
 #endif

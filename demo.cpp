@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-#include "rle/rle.hpp"
+#include "rlbe/rlbe.hpp"
 
 using namespace std;
 
@@ -25,20 +25,13 @@ void string_to_bytes(const string&x, bytes& y) {
 	copy(x.begin(), x.end(), back_inserter(y));
 }
 
-void random_sequence(size_t n, size_t k, bytes& y) {
-	for (size_t i = 0; i < n; ++i) {
-		y.push_back( rand() % k );
-	}
-}
-
 int main(int argc, char* argv[]) {
 	srand(time(NULL));
 
-	rle::Encoder<byte> encoder;
+	rlbe::Encoder<byte> encoder;
 
 	bytes x;
 	string_to_bytes("AAAAAAAATTCGATAAAAACGTTTAGATGAGAGTGCGA", x);
-	//rle::random_sequence(100, 256, x);
 
 	bytes y;
 	encoder.encode(x, y);
