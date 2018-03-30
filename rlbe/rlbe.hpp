@@ -1,12 +1,13 @@
-#ifndef _RLE_HPP_
-#define _RLE_HPP_
+#ifndef _RLBE_HPP_
+#define _RLBE_HPP_
 
-#include <limits>
+/** 
+ *  Run-length block encoding.
+ **/
 
-#include <string>
 #include <vector>
+#include <limits>     // numeric_limits
 #include <cstdlib>    // rand
-
 #include <algorithm>  // copy
 #include <iterator>   // back_inserter
 
