@@ -5,8 +5,10 @@ Run-length block encoding similar to the PackBits algorithm,
 Encoded byte string consists of blocks. Each block has a header byte (n), followed
 by data bytes.
 
-If n is in [0, 127], copy next n + 1 bytes verbatim.
-If n is in [128, 255], repeat next byte for (n - 128 + 3) times.
+If n is in [0, t - 1], copy next n + 1 bytes verbatim.
+If n is in [t, 255], repeat next byte for (n - t + 3) times.
+
+where t is often set to 128.
 
 
 ## Reference

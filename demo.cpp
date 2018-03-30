@@ -7,22 +7,41 @@
 using namespace std;
 
 
-void print_bytes(const rle::bytes&x) {
+typedef unsigned char byte;
+//typedef unsigned int byte;
+typedef vector<byte> bytes;
+
+void print_bytes(const bytes&x) {
 	for (size_t i = 0; i < x.size(); ++i) {
-		cout << (int) x[i] << ' ';
+		cout << (unsigned int) x[i] << ' ';
+	}
+}
+
+void bytes_to_string(const bytes& x, string& y) {
+	copy(x.begin(), x.end(), back_inserter(y));
+}
+
+void string_to_bytes(const string&x, bytes& y) {
+	copy(x.begin(), x.end(), back_inserter(y));
+}
+
+void random_sequence(size_t n, size_t k, bytes& y) {
+	for (size_t i = 0; i < n; ++i) {
+		y.push_back( rand() % k );
 	}
 }
 
 int main(int argc, char* argv[]) {
 	srand(time(NULL));
 
-	rle::bytes x;
+	rle::Encoder<byte> encoder;
 
-	rle::string_to_bytes("AAAAAAAAAATTCGATAAAAACGTTTAGATGAGAGTGCGA", x);
+	bytes x;
+	string_to_bytes("AAAAAAAATTCGATAAAAACGTTTAGATGAGAGTGCGA", x);
 	//rle::random_sequence(100, 256, x);
 
-	rle::bytes y;
-	rle::encode(x, y);
+	bytes y;
+	encoder.encode(x, y);
 
 	cout << "x = " << endl << "    ";
 	print_bytes(x);
@@ -32,13 +51,13 @@ int main(int argc, char* argv[]) {
 	print_bytes(y);
 	cout << endl;
 
-	rle::bytes x2;
-	rle::decode(y, x2);
+	bytes x2;
+	encoder.decode(y, x2);
 
 	string x1s, x2s;
-	rle::bytes_to_string(x, x1s);
+	bytes_to_string(x, x1s);
 	cout << x1s << endl;
-	rle::bytes_to_string(x2, x2s);
+	bytes_to_string(x2, x2s);
 	cout << x2s << endl;
 	cout << "equal: " << (x == x2) << endl;
 
