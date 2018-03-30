@@ -7,9 +7,6 @@
 
 #include <vector>
 #include <limits>     // numeric_limits
-#include <cstdlib>    // rand
-#include <algorithm>  // copy
-#include <iterator>   // back_inserter
 
 
 namespace rlbe {
