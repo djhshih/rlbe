@@ -36,6 +36,7 @@ public:
 	{
 	}
 
+	// t in [1, 254]
 	Encoder(symbol _t)
 		: t(_t)
 	{

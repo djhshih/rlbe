@@ -37,6 +37,7 @@ public:
 	{
 	}
 
+	// k > 0
 	Encoder(symbol _k)
 		: k(_k)
 	{

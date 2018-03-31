@@ -36,6 +36,7 @@ is encoded as
 
 where spaces delimit blocks.
 
+
 ## Reference
 
 Michael Dipperstein. "Run Length Encoding Discussion and Implementation" http://michael.dipperstein.com/rle/index.html

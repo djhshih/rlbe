@@ -73,7 +73,7 @@ int main(int argc, char* argv[]) {
 	{
 		cout << "Run-length encoding" << endl;
 
-		for (byte k = 2; k <= 5; ++k) {
+		for (byte k = 1; k <= 5; ++k) {
 			cout << "k = " << (unsigned int) k << endl;
 			rle::Encoder<byte> encoder(k);
 			rc |= test_encoder(encoder, rounds, length);
