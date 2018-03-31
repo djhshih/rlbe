@@ -1,6 +1,6 @@
 # Run-length encoding
 
-## Run-length encoding
+## Traditional run-length encoding
 
 Given minimum run-length k, encoded byte string stores the original bytes
 mostly modified but truncates repeats at run-length k and substitutes
