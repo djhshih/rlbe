@@ -13,6 +13,7 @@ namespace rlbe {
 
 using namespace std;
 
+// T must be an unsigned type.
 template<typename T>
 class Encoder {
 
