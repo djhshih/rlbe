@@ -59,7 +59,7 @@ public:
 
 			// look for a same-symbol run
 			size_t j = i + 1;
-			while (j < x.size() && j - i < t - 1) {
+			while (j < x.size() && j - i < max_value - t - 1) {
 				if (x[i] != x[j]) {
 					break;
 				}
