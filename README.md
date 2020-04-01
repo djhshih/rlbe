@@ -37,8 +37,8 @@ is encoded as
 where spaces are shown to visually distinguish the blocks. This encoding format
 does *not* actually need block delimiters.
 
-Remark: Numbers are stored as raw bytes, so `131` is stored as an `uint8`
-value, *not* as 3 `char` values.
+Remark: Numbers are stored as raw bytes, so `131` is stored as one `uint8`
+value, *not* as three `char` values.
 
 
 ## Reference
